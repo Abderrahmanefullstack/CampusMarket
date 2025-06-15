@@ -1,0 +1,12 @@
+.signup-container {
+    background-image: url('https://images.unsplash.com/photo-1534155329146-c9d4f655be0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajoutez d'autres styles pour votre formulaire si nécessaire */

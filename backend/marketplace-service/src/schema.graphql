@@ -1,0 +1,21 @@
+type Ad {
+  id: ID!
+  title: String!
+  description: String!
+  price: Float!
+  sellerId: String!
+  sold: Boolean!
+  createdAt: String
+  updatedAt: String
+}
+
+type Query {
+  ads: [Ad!]!
+  ad(id: ID!): Ad
+}
+
+type Mutation {
+  createAd(title: String!, description: String!, price: Float!, sellerId: String!): Ad!
+  updateAd(id: ID!, title: String!, description: String!, price: Float!): Ad!
+  deleteAd(id: ID!): Boolean!
+} 

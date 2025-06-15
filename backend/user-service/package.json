@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start": "node dist/main.js",
+        "start:dev": "ts-node src/main.ts"
+    }
+}

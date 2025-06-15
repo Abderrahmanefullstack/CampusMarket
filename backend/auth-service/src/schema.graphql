@@ -1,0 +1,4 @@
+type Mutation {
+  signup(email: String!, password: String!, name: String!): String!
+  login(email: String!, password: String!): String!
+} 

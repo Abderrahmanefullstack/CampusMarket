@@ -1,0 +1,31 @@
+<div class="profile-container">
+    <mat-toolbar color="primary">
+        <span>Mon profil</span>
+    </mat-toolbar>
+
+    <mat-card class="profile-card">
+        <form [formGroup]="profileForm" (ngSubmit)="onSave()">
+            <div class="avatar-section">
+                <img [src]="profileForm.value.avatarUrl || 'https://api.dicebear.com/7.x/initials/svg?seed=' + profileForm.value.name"
+                    alt="Avatar" class="avatar-img">
+            </div>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" disabled>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Nom</mat-label>
+                <input matInput formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>URL de l'avatar (optionnel)</mat-label>
+                <input matInput formControlName="avatarUrl">
+            </mat-form-field>
+            <div class="form-actions">
+                <button mat-raised-button color="primary" type="submit" [disabled]="loading">Sauvegarder</button>
+            </div>
+            <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+            <mat-error *ngIf="error">{{ error }}</mat-error>
+        </form>
+    </mat-card>
+</div>

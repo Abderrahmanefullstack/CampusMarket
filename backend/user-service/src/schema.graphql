@@ -1,0 +1,27 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  avatarUrl: String
+}
+
+type Message {
+  id: ID!
+  senderId: String!
+  receiverId: String!
+  content: String!
+  read: Boolean!
+  createdAt: String
+  updatedAt: String
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+  messages(userId: String!): [Message!]!
+}
+
+type Mutation {
+  updateUser(id: ID!, name: String!, avatarUrl: String): User!
+  sendMessage(senderId: String!, receiverId: String!, content: String!): Message!
+} 

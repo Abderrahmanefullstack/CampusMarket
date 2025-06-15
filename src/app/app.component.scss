@@ -1,0 +1,41 @@
+.main-container {
+    height: 100vh;
+}
+
+mat-sidenav {
+    width: 220px;
+}
+
+.app-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.page-content {
+    padding: 24px;
+    background: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.active-link {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    mat-sidenav {
+        width: 160px;
+    }
+
+    .hide-desktop {
+        display: inline-flex;
+    }
+}
