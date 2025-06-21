@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ * ]
   pull_request:
-    branches: [ main ]
+    branches: [ * ]
 
 jobs:
   build-and-push:
@@ -14,15 +14,15 @@ jobs:
         service: [frontend, backend]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.abderrahmanefullstack }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push ${{ matrix.service }} image
