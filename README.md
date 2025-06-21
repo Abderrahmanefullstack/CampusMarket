@@ -10,7 +10,7 @@ Ce dossier contient l'architecture backend du projet CampusMarket, une marketpla
 - `api-gateway` : Point d'entrée GraphQL pour le frontend
 - `common` : Librairies partagées (DTO, interfaces, etc.)
 
-## Technologies principales
+## Les Technologies principales
 - NestJS
 - MongoDB
 - Kafka
